@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ESNext"],
+  },
+  "include": [
+    "src/**/*.ts",
+    "tsup.config.ts"
+  ]
+}
