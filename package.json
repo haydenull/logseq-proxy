@@ -25,11 +25,18 @@
     "url": "https://github.com/haydenull/logseq-proxy/issues"
   },
   "homepage": "https://github.com/haydenull/logseq-proxy#readme",
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ]
+  },
   "devDependencies": {
     "@haydenull/fabric": "^0.1.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
     "tsup": "^7.1.0",
-    "typescript": "^5.1.6",
-    "husky": "^8.0.0"
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "@logseq/libs": "^0.0.15"
