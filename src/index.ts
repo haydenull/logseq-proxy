@@ -46,11 +46,13 @@ const proxyLogseqMethodsObject = (key: (typeof LOGSEQ_METHODS_OBJECT)[number]) =
       },
     },
   )
+  if (typeof window === 'undefined') return console.error('window is undefined')
   // @ts-expect-error use proxy to reset window.logseq[key]
   window.logseq[key] = proxy
 }
 const proxyLogseq = ({ settings, config: _config }: { settings: Record<string, unknown>; config: Config }) => {
   config = _config
+  if (typeof window === 'undefined') return console.error('window is undefined')
   // @ts-expect-error reset window.logseq to plain object
   window.logseq = {}
   LOGSEQ_METHODS_OBJECT.forEach(proxyLogseqMethodsObject)

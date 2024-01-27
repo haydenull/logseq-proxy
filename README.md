@@ -11,9 +11,9 @@ pnpm add @logseq/libs logseq-proxy
 
 ```ts
 import '@logseq/libs'
-import {logseqProxy} from 'logseq-proxy'
+import proxyLogseq from 'logseq-proxy'
 
-logseqProxy({
+proxyLogseq({
   settings: {
     // your plugin settings
   },
@@ -22,4 +22,13 @@ logseqProxy({
     apiToken: 'your api token',          // your api token
   }
 })
+```
+
+3. use logseq sdk
+
+```ts
+const getBlock = async () => {
+  const block = await logseq.Editor.getBlock('blockUUID')
+  console.log(block)
+}
 ```

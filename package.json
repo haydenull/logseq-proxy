@@ -1,6 +1,6 @@
 {
   "name": "logseq-proxy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Proxy logseq SDK, providing a better development experience.",
   "main": "dist/index.mjs",
   "scripts": {
